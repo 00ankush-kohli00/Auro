@@ -47,9 +47,9 @@ const index = () => {
         </View>
         {/* maine yaha per pura kiya hai or button ke file ko bhi ker diya hai
          */}
-      
-        <StatusBar backgroundColor="#161622" style="light" />
       </ScrollView>
+      {/* status bar color white changed to all pages  */}
+      <StatusBar style="inverted" backgroundColor="#161622" />
     </SafeAreaView>
   );
 };
