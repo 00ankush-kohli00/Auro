@@ -44,6 +44,11 @@ const index = () => {
             handlePress={() => router.push("/sign-in")}
             containerStyles="w-full mt-7"
           />
+          <CustomButton
+            title="To the home"
+            handlePress={() => router.push("/home")}
+            containerStyles="w-full mt-7"
+          />
         </View>
         {/* maine yaha per pura kiya hai or button ke file ko bhi ker diya hai
          */}
