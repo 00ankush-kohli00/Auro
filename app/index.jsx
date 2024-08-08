@@ -3,6 +3,7 @@ import React from "react";
 import { images } from "../constants";
 import { StatusBar } from "expo-status-bar";
 import CustomButton from "../components/CustomButton";
+import { router } from "expo-router";
 
 const index = () => {
   return (
@@ -38,8 +39,15 @@ const index = () => {
             Where creativity meets inovation: embark on a journey of limitless
             exploration with Aora.
           </Text>
+          <CustomButton
+            title="Countinue with Email"
+            handlePress={() => router.push("/sign-in")}
+            containerStyles="w-full mt-7"
+          />
         </View>
-        <CustomButton />
+        {/* maine yaha per pura kiya hai or button ke file ko bhi ker diya hai
+         */}
+      
         <StatusBar backgroundColor="#161622" style="light" />
       </ScrollView>
     </SafeAreaView>
