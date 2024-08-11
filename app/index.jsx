@@ -1,9 +1,10 @@
-import { Image, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import { images } from "../constants";
 import { StatusBar } from "expo-status-bar";
 import CustomButton from "../components/CustomButton";
-import { router } from "expo-router";
+import { Redirect, router } from "expo-router";
 
 const index = () => {
   return (
@@ -40,21 +41,13 @@ const index = () => {
             exploration with Aora.
           </Text>
           <CustomButton
-            title="Countinue with Email"
+            title={"Continue with Email"}
             handlePress={() => router.push("/sign-in")}
             containerStyles="w-full mt-7"
           />
-          <CustomButton
-            title="To the home"
-            handlePress={() => router.push("/home")}
-            containerStyles="w-full mt-7"
-          />
         </View>
-        {/* maine yaha per pura kiya hai or button ke file ko bhi ker diya hai
-         */}
       </ScrollView>
-      {/* status bar color white changed to all pages  */}
-      <StatusBar style="inverted" backgroundColor="#161622" />
+      <StatusBar backgroundColor="#161622" style="light" />
     </SafeAreaView>
   );
 };

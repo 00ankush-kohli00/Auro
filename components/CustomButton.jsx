@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 
 const CustomButton = ({
@@ -17,7 +17,9 @@ const CustomButton = ({
       }`}
       disabled={isLoading}
     >
-      <Text className={`text-lg font-psemibold text-primary ${textStyles}`}>{title}</Text>
+      <Text className={`text-primary font-psemibold text-lg ${textStyles}`}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
